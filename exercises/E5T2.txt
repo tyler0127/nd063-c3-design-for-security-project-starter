@@ -1,0 +1,30 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+cloudsploit(https://github.com/aquasecurity/cloudsploit)
+
+### Example vulnerability
+- security group configuration issue
+ex: Error 'Security group ingress exposes a non-web port globally: 22' for resource 'SecurityGroup'
+
+##Scan AMI’s or containers for OS vulnerabilities
+clair(https://github.com/quay/clair)
+
+### Example vulnerability
+- Clair can list the CVE for specific docker image.
+ex: 
+```
+{
+    "Name":"CVE-2018-1049",
+    "NamespaceName":"debian:9",
+    "Description":"In systemd prior to 234 a race condition exists between .mount and .automount units such that automount requests from kernel may not be serviced by systemd resulting in kernel holding the mountpoint and any processes that try to use said mount will hang. A race condition like this may lead to denial of service, until mount points are unmounted.",
+    "Link":"https://security-tracker.debian.org/tracker/CVE-2018-1049",
+    "Severity":"Medium"
+}
+```
+##Scan an AWS environment for cloud configuration vulnerabilities
+prowler
+
+### Example vulnerability
+- Check covering security best practices
+ex: Identity and Access Management, CIS, PCI-DSS, etc.

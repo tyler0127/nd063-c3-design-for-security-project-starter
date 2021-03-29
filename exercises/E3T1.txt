@@ -1,0 +1,9 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+High Severity SSH brute-force attack coming from the Attack Instance.
+Low Severity SSH brute-force attack is detacted in Web Service Instance.
+
+# Research the AWS GuardDuty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+According to the description of GuardDuty User Guide, The GuardDuty will analyze and processes several datasource such as VPC Flow Logs, AWS CloudTrail management event logs, Cloudtrail S3 data event logs, and DNS logs.
+This means the GuardDuty was scanning the logs of ec2 instance to detect the SSH brute-force attack (monitoring traffic on port 22).

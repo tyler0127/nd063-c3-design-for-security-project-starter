@@ -1,0 +1,11 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+1. S3.4 S3 buckets should have server-side encryption enabled
+2. S3.5 S3 buckets should require requests to use Secure Socket Layer
+3. EC2.9 EC2 instances should not have a public IPv4 address
+4. EC2.8 EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+1. To enable default encryption on the S3 bucket
+2. Update the permissions policy of the S3 bucket to allow SSL requests only.
+3. Disassociating the Elastic IP address from Web Service Instance.
+4. Configure the instance metadata service to solve the issue.

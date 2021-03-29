@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+S3 Bucket has not created an IAM policy to control who is authenticated and authorized to use resources, the bucket is not encrypted as well.
+
+# Poor practice 2
+The Web instance server should not in the public subnet. Then its security group should configure inbound and outbound with the Principle of least privilege. In this case, the security group should allow ALB only.

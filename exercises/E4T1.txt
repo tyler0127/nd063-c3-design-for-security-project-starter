@@ -1,0 +1,9 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+To prevent an SSH brute force attack, we can make the folling changes:
+1. Allow only the connections from ALB by updating the Security Group configuration.
+2. Through the Session Manager service to manage the access control using IAM policies. In this way, There is no longer accessible 22 port from the Internet.
+3. Move the instance from public subnet to private subnet.
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+Using Customer managed CMKs to encrypt S3 Data and establishing IAM policies with Customer managed CMKs to prevente the access.
